@@ -1,0 +1,239 @@
+body {
+    height: 100vh;
+    display: flex;
+    background-color: black;
+    flex-direction: column;
+    transition: .5s;
+    align-items: center;
+    justify-content: center;
+}
+
+nav.menu-lateral {
+    width: 75px;
+    height: 100%;
+    background-color: #262626;
+    padding: 40px 0 40px 1%;
+    box-shadow: 4px 0 0 #8b008b;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    transition: .7s;
+}
+
+nav.menu-lateral.expandir {
+    width: 300px;
+}
+
+/* Botão para o menu*/
+.btn-expandir {
+    width: 100%;
+    padding-left: 5px;
+    position: relative;
+    margin-bottom: 20px;
+}
+
+/* Botão para o menu*/
+.btn-expandir>i {
+    color: white;
+    font-size: 27px;
+    cursor: pointer;
+}
+
+
+ul {
+    height: 100%;
+    list-style: none;
+}
+
+/* Itens menu muda a cor do icon e a fonte*/
+ul li.item-menu a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 20px;
+    padding: 20px 4%;
+    display: flex;
+    margin-bottom: 15px;
+    line-height: 40px;
+}
+
+ul li.item-menu {
+    transition: .4s;
+}
+
+ul li.ativo {
+    background-color: #8b008b;
+}
+
+ul li.item-menu:hover {
+    background-color: #8b008b;
+}
+
+/* Muda a margin das escrita do icon*/
+ul li.item-menu a .txt-link {
+    margin-left: 70px;
+    transition: 1s;
+    opacity: 0;
+}
+
+nav.menu-lateral.expandir .txt-link {
+    margin-left: 45px;
+    opacity: 1;
+}
+
+/* Tamanho dos icon*/
+ul li.item-menu a .icon>i {
+    font-size: 30px;
+}
+
+/* Modo dark ou light*/
+
+
+.trilho.dark .indicador {
+    background-color: #7d7d7d;
+}
+
+body.dark {
+    background-color: #ffffff;
+}
+
+body.dark nav.menu-lateral {
+    background-color: #ffffff;
+}
+
+body.dark .btn-expandir>i {
+    color: black;
+}
+
+body.dark ul li.item-menu a {
+    color: black;
+}
+
+.indicador {
+    height: 50px;
+    width: 50px;
+    padding: 0;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 1s;
+    background-color: rgb(0, 0, 0);
+    position: relative;
+    top: 20px;
+    right: 5px;
+    cursor: pointer;
+}
+
+.indicador svg {
+    fill: #ffffff;
+}
+
+.indicador svg:last-child {
+    display: none;
+}
+
+
+/* Redes Sociais icons*/
+.redes-sociais ul {
+    list-style-type: none;
+    
+    display: flex;
+    position: relative;
+    gap: 40px;
+}
+
+.redes-sociais ul li {
+    width: 80px;
+    height: 80px;
+
+    background-color: white;
+    box-shadow: 0 8px 25px #00000056;
+    border-radius: 60px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: relative;
+    transition: 0.4s
+}
+
+.redes-sociais ul li:hover {
+    width: 180px ;
+}
+
+.redes-sociais ul li span {
+    position: absolute
+}
+
+.redes-sociais ul li .icons-redes {
+    color: #5e5e5e;
+    font-size: 2.2em;
+
+    transition: .4s;
+}
+
+.redes-sociais ul li .text-redes {
+    color: #fff;
+    font-size: 20px;
+    transform: scale(0);
+    transition: .3s;
+    transition-delay: .1s;
+}
+
+.redes-sociais ul li:hover .text-redes {
+    transform: scale(1);
+}
+
+.redes-sociais ul li:hover .icons-redes {
+    transform: scale(0);
+}
+
+.redes-sociais ul li::before {
+    content: '';
+    position: absolute;
+    background-image: linear-gradient(45deg, var(--cor1), var(--cor2));
+    inset: 0;
+    opacity: 0;
+    border-radius: 60px;
+}
+
+.redes-sociais ul li:hover::before {
+    opacity: 1;
+}
+
+.title-redes-sociais {
+    position: relative;
+    margin-top: 20px;
+    margin-bottom: 25px;
+    font-size: 45px;
+    color: white;
+    text-align: center;
+}
+
+/* Quem Somos*/
+
+.quem-somos {
+    color: white;
+}
+
+.title-quem-somos {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    padding-bottom: 570px;
+    text-align: center;
+    margin-bottom: 25px;
+    font-size: 45px;
+    color: white;
+}
+
+.quem-somos .text-quem-somos {
+    width: 50%;
+    position: relative;
+    left: 25%;
+    margin-bottom: 25px;
+    text-align: center;
+}
